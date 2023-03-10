@@ -9,13 +9,13 @@ notifyNum.textContent = `${count}`;
 
 
 document.addEventListener('click', (e) => {
-  if (e.target.classList.contains('bg-dark')) {
-     e.target.classList.remove('bg-dark');
-     console.log(e.target.children)
+  
+     e.target.closest('.bg-dark').classList.remove('bg-dark');
+     
      
      renderCount();
-  }
-});
+  })
+
 
 
 
