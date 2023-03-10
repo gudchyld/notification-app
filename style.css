@@ -1,43 +1,56 @@
-body {
-    font-size: 6px;
+*, 
+*::before, 
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.container{
-  width:300px;
-  margin: auto;
-  box-shadow: 1px 0px 2px 1px grey;
-  padding: 10px;
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.3rem;
+    color: hsl(219, 12%, 42%);
+    background-color:hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
+
+
+/* LAYOUT */
+.container{
+  max-width: 200px;
+  margin: 0 auto;
+  box-shadow: 1px 0px 2px 1px grey;
+  padding: 7px;
+}
+
+
 .header{
   display: flex;
+  align-items: center;
   margin-bottom: 10px;
 }
-.notify{
-  font-weight: bold;
-}
-.mark-read{
-  margin-left: auto;
-}
+
+
 .notify-num{
-  margin-left:  5px;
+  margin-left: 0.91em;
   width: 10px;
-  height: 10px;
-  background: darkblue;
-  color: white ;
-  align-self: center;
-  text-align: center;
-  font-size: 4px;
-  padding: 2px;
+  height: 8px;
+  background: hsl(219, 85%, 26%);
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.28rem;
+  font-weight: 800;
+  padding: 0.125em;
+  border-radius: 0.63em;
 }
-.con-img{
-  width: 30px;
-  
-  
-}
-.msg-img{
-  width: 100%;
-  border-radius: 50%;
-}
+
+
 .msg{
   display: flex;
   gap: 7px;
@@ -46,17 +59,111 @@ body {
   border-radius: 5px;
   margin-block: 5px;
 }
-.bg-grey{
-  background-color: hsl(0.00,10.67%,90%);
+
+
+.bg-dark{
+  background-color: hsl(211, 68%, 94%);
 }
-.bg-white{
-  background: white;
+
+
+.private-msg{
+  margin: 1em;
+  display: block;
+  border: 0.7px solid hsl(205, 33%, 90%);
+  padding: 0.75em 1em;
+  border-radius: 2px;
 }
+
+
+.small{
+  display: inline-block;
+  background-color: hsl(1, 90%, 64%);
+  border-radius: 50%;
+  width: 3px;
+  height: 3px;
+  align-self:center;
+  margin-left: 0.45em;
+}
+
+
+/* TYPOGRAPHY */
+
+.notify{
+  font-weight: 800;
+  color: hsl(224, 21%, 14%);
+}
+
+
 .msg-main{
   margin: 0;
 }
+
+
 .msg-time{
   margin : 0;
-  opacity: 40%;
+  opacity: 30%;
   font-size: 4px;
+  font-weight: 500;
 }
+
+
+.chess{
+  color: hsl(219, 85%, 26%);
+  font-weight: 800;
+}
+
+
+.end-game,
+.tourn {
+  color: hsl(219, 12%, 42%);
+  font-weight: 800;
+}
+
+
+a{
+  text-decoration: none;
+  color: hsl(224, 21%, 14%);
+  font-weight: 800;
+}
+
+
+a:hover,
+.tourn:hover {
+  color: hsl(219, 85%, 26%);
+}
+
+
+/* BUTTON */
+.mark-read{
+  font-size: 0.35rem;
+  font-family: inherit;
+  color: hsl(219, 12%, 42%);
+  border: none;
+  background: none;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.mark-read:focus,
+.mark-read:hover{
+  color: hsl(219, 85%, 26%);
+}
+
+
+/* IMAGES */
+img{
+  max-width: 100%;
+}
+
+.msg-img,
+.chess-img{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.chess-img{
+  border-radius: 3px;
+}
+
+

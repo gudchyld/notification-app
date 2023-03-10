@@ -3,61 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Notification App</title>
-  
-  <!-- HTML -->
-  
-
-  <!-- Custom Styles -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Notifications page</title>
 </head>
-
 <body>
-  <div class="container">
-    <nav class="header">
-      <p class="notify">Notification</p>
-      <div class="notify-num"></div>
-      <p class="mark-read">Mark all as read</p>
-    </nav>
-    ,
-    <main class="main" id="main">
-    <section class="msg bg-grey">
-      <div class="con-img"><img class="msg-img" src="images/val.jpg" /></div>
+<div class ="container">
+  <nav class="header">
+    <p class="notify">Notification</p>
+    <div class="notify-num"></div>
+    <button class="mark-read">Mark all as read</button>
+  </nav>
+
+
+  <main class="main" id="main">
+    <section class="msg bg-dark">
+      <img class="msg-img" src="assets/images/avatar-mark-webber.webp" />
       <div class="msg-detail">
-        <p class="msg-main">This is the beginning of my chats and i love my hair cos it is natural</p>
+        <p class="msg-main"><a href="#">Mark Webber</a>  reacted to your recent post <span class="tourn">My first tournament today!</span> <span class="small"></span></p>
         <p class="msg-time">1 min ago</p>
       </div>
     </section>
-    
-    <section class="msg bg-grey">
-        <div class="con-img"><img class="msg-img" src="images/val.jpg" /></div>
-        <div class="msg-detail">
-          <p class="msg-main">uhmm let me change this one so ify doesnt think i'm an evil genius.</p>
-          <p class="msg-time">1 min ago</p>
-        </div>
-    </section>
-    
-    <section class="msg bg-grey">
-      <div class="con-img"><img class="msg-img" src="images/val.jpg" /></div>
+
+    <section class="msg bg-dark">
+      <img class="msg-img" src="assets/images/avatar-angela-gray.webp" />
       <div class="msg-detail">
-        <p class="msg-main">This is the beginning of my chats and i love my hair cos its natural</p>
-        <p class="msg-time">1 min ago</p>
+        <p class="msg-main"><a href="#">Angela Gray</a>  followed you<span class="small"></span></p>
+        <p class="msg-time">5 min ago</p>
       </div>
     </section>
-    
-      <section class="msg bg-white">
-      <div class="con-img"><img class="msg-img" src="images/ify.jpg" /></div>
+
+    <section class="msg bg-dark">
+      <img class="msg-img" src="assets/images/avatar-jacob-thompson.webp" />
       <div class="msg-detail">
-        <p class="msg-main">About the hair i think its simply gorgeous but we gonna have to cut it</p>
-        <p class="msg-time">3 mins ago</p>
+        <p class="msg-main"><a href="#">Jacob Thompson</a>  has joined your group <span class="chess">Chess Club</span><span class="small"></span></p>
+        <p class="msg-time">1 day ago</p>
       </div>
     </section>
-    </main>
+  
+
+    
+    <section class="msg">
+      <img class="msg-img" src="assets/images/avatar-rizky-hasanuddin.webp" />
+      <div class="msg-detail">
+        <p class="msg-main"><a href="#">Rizky Hasanuddin</a>  sent you a private message</p>
+        <p class="msg-time">5 days ago</p>
+        <span class="private-msg"><p>Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
+          I'm already having lots of fun and improving my game.</p></span>
+      </div>
+    </section>
+
+
+    <section class="msg">
+      <img class="msg-img" src="assets/images/avatar-kimberly-smith.webp"  />
+      <div class="msg-detail">
+        <p class="msg-main"><a href="#">Kimberly Smith</a> commented on your picture</p>
+        <p class="msg-time">1 week ago</p>
+      </div>
+      <img class="chess-img" src="assets/images/image-chess.webp"/>
+    </section>
+
+    <section class="msg bg">
+      <img class="msg-img" src="assets/images/avatar-nathan-peterson.webp"  />
+      <div class="msg-detail">
+        <p class="msg-main"><a href="#">Nathan Peterson</a> reacted to your recent post  <span class="end-game">5 end-game strategies to increase your win rate</span></p>
+        <p class="msg-time">2 weeks ago</p>
+      </div>
+    </section>
+
+    <section class="msg">
+      <img class="msg-img" src="assets/images/avatar-anna-kim.webp"  />
+      <div class="msg-detail">
+        <p class="msg-main"><a href="#">Anna Kim</a> left the group <span class="chess">Chess Club</span></p>
+        <p class="msg-time">2 weeks ago</p>
+      </div>
+    </section>
+   </main>
   
   </div>
-  <!-- Project -->
+
   <script src="main.js"></script>
 </body>
 </html>
