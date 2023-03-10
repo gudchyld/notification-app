@@ -1,7 +1,7 @@
 
 // let main = document.getElementById('main')
 let markRead = document.querySelector('.mark-read')
-let unreadMsg = document.querySelectorAll(".bg-grey")
+let unreadMsg = document.querySelectorAll(".bg-dark")
 let count = unreadMsg.length;
 let notifyNum = document.querySelector('.notify-num')
 notifyNum.textContent = `${count}`;
@@ -9,8 +9,10 @@ notifyNum.textContent = `${count}`;
 
 
 document.addEventListener('click', (e) => {
-  if (e.target.classList.contains('bg-grey')) {
-     e.target.classList.remove('bg-grey');
+  if (e.target.classList.contains('bg-dark')) {
+     e.target.classList.remove('bg-dark');
+     console.log(e.target.children)
+     
      renderCount();
   }
 });
@@ -18,14 +20,14 @@ document.addEventListener('click', (e) => {
 
 
 markRead.addEventListener('click',() => {
-  unreadMsg.forEach(item => item.classList.remove('bg-grey'));
+  unreadMsg.forEach(item => item.classList.remove('bg-dark'));
   renderCount();
 })
 
 
 
 function renderCount(){
-  let unreadMsg = document.querySelectorAll(".bg-grey")
+  let unreadMsg = document.querySelectorAll(".bg-dark")
   let count = unreadMsg.length;
   notifyNum.textContent = `${count}`;
   
