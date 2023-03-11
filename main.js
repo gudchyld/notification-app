@@ -11,6 +11,7 @@ notifyNum.textContent = `${count}`;
 document.addEventListener('click', (e) => {
   //when any element close to the element with class name 'bg-dark' is clicked, return to the element with class name 'bg-dark' and remove 'bg-dark' from its classlist
 
+  
      if(e.target.parentElement.dataset.check){
      e.target.closest('.bg-dark').classList.remove('bg-dark');
      document.getElementById(e.target.parentElement.dataset.check).style.display = 'none'
