@@ -12,9 +12,8 @@ document.addEventListener('click', (e) => {
   //when any element close to the element with class name 'bg-dark' is clicked, return to the element with class name 'bg-dark' and remove 'bg-dark' from its classlist
   
      let darkParent=e.target.closest('.bg-dark')
-     if(e.target.closest('.bg-dark')){
-       
-     e.target.closest('.bg-dark').classList.remove('bg-dark');
+     if(darkParent){
+     darkParent.classList.remove('bg-dark');
      document.getElementById(darkParent.dataset.check).style.display = 'none'
     }
      
