@@ -10,11 +10,12 @@ notifyNum.textContent = `${count}`;
 
 document.addEventListener('click', (e) => {
   //when any element close to the element with class name 'bg-dark' is clicked, return to the element with class name 'bg-dark' and remove 'bg-dark' from its classlist
-
   
-     if(e.target.parentElement.dataset.check){
+     let darkParent=e.target.closest('.bg-dark')
+     if(e.target.closest('.bg-dark')){
+       
      e.target.closest('.bg-dark').classList.remove('bg-dark');
-     document.getElementById(e.target.parentElement.dataset.check).style.display = 'none'
+     document.getElementById(darkParent.dataset.check).style.display = 'none'
     }
      
      renderCount();
@@ -22,7 +23,11 @@ document.addEventListener('click', (e) => {
 
 markRead.addEventListener('click',() => {
   unreadMsg.forEach(item => item.classList.remove('bg-dark'));
+  
+  redDot.forEach(item => item.classList.remove('small'))
   renderCount();
+  
+  
 })
 
 function renderCount(){
